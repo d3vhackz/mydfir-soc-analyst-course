@@ -69,21 +69,17 @@ User Request → Authentication → Authorization → Access Granted → Account
 ```
 
 ### 🔑 Authentication
-**Definition**: Identity verification process
-
-**Methods**: Passwords, biometrics, security tokens, multi-factor authentication
+- **Definition**: Identity verification process
+- **Methods**: Passwords, biometrics, security tokens, multi-factor authentication
 
 ### 📋 Authorization
-**Definition**: Permission assignment based on verified identity
-
-**Timing**: Always occurs after successful authentication
-
-**Basis**: Role-based access control (RBAC) and permission matrices
+- **Definition**: Permission assignment based on verified identity
+- **Timing**: Always occurs after successful authentication
+- **Basis**: Role-based access control (RBAC) and permission matrices
 
 ### 📊 Accounting
-**Definition**: Activity monitoring and logging for accountability
-
-**Purpose**: Audit trails, compliance reporting, and incident investigation
+- **Definition**: Activity monitoring and logging for accountability
+- **Purpose**: Audit trails, compliance reporting, and incident investigation
 
 ---
 
@@ -211,16 +207,16 @@ mindmap
 ### Key Indicators and Patterns
 
 #### 🚨 Indicators of Compromise (IOCs)
-**Definition**: Digital forensic artifacts suggesting system compromise
-**Examples**: Malicious file hashes, suspicious IP addresses, unusual network traffic
+- **Definition**: Digital forensic artifacts suggesting system compromise
+- **Examples**: Malicious file hashes, suspicious IP addresses, unusual network traffic
 
 #### 🔍 Indicators of Attack (IOAs)  
-**Definition**: Real-time signs of ongoing attack activities
-**Examples**: Unusual login patterns, privilege escalation attempts, lateral movement
+- **Definition**: Real-time signs of ongoing attack activities
+- **Examples**: Unusual login patterns, privilege escalation attempts, lateral movement
 
 #### 📋 Tactics, Techniques, and Procedures (TTPs)
-**Definition**: Behavioral patterns and methodologies used by threat actors
-**Purpose**: Understanding adversary capabilities and predicting future attacks
+- **Definition**: Behavioral patterns and methodologies used by threat actors
+- **Purpose**: Understanding adversary capabilities and predicting future attacks
 
 ```mermaid
 graph LR
