@@ -75,11 +75,14 @@ User Request → Authentication → Authorization → Access Granted → Account
 
 ### 📋 Authorization
 **Definition**: Permission assignment based on verified identity
+
 **Timing**: Always occurs after successful authentication
+
 **Basis**: Role-based access control (RBAC) and permission matrices
 
 ### 📊 Accounting
 **Definition**: Activity monitoring and logging for accountability
+
 **Purpose**: Audit trails, compliance reporting, and incident investigation
 
 ---
