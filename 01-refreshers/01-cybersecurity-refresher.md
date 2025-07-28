@@ -70,6 +70,7 @@ User Request → Authentication → Authorization → Access Granted → Account
 
 ### 🔑 Authentication
 **Definition**: Identity verification process
+
 **Methods**: Passwords, biometrics, security tokens, multi-factor authentication
 
 ### 📋 Authorization
