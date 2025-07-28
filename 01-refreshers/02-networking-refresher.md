@@ -71,16 +71,11 @@ Subnetting divides larger networks into smaller, manageable segments using CIDR 
 
 #### Traditional Class System:
 
-```mermaid
-graph TD
-    A[IP Address Classes] --> B[Class A<br/>1-126<br/>Large Networks]
-    A --> C[Class B<br/>128-191<br/>Medium Networks]
-    A --> D[Class C<br/>192-223<br/>Small Networks]
-    
-    B --> B1[/8 Subnet<br/>~16M hosts]
-    C --> C1[/16 Subnet<br/>~65K hosts]
-    D --> D1[/24 Subnet<br/>254 hosts]
-```
+| Class | First Octet Range | Default Subnet Mask | CIDR | Approximate Hosts | Network Size |
+|-------|-------------------|---------------------|------|-------------------|--------------|
+| **Class A** | 1-126 | 255.0.0.0 | /8 | ~16 Million | Large Networks |
+| **Class B** | 128-191 | 255.255.0.0 | /16 | ~65 Thousand | Medium Networks |
+| **Class C** | 192-223 | 255.255.255.0 | /24 | 254 | Small Networks |
 
 #### Private vs Public IP Ranges:
 
@@ -153,33 +148,36 @@ graph LR
 
 Understanding how data flows through network layers is crucial for traffic analysis and incident investigation.
 
-```mermaid
-graph TD
-    subgraph "OSI Model (7 Layers)"
-        A7[7 - Application<br/>HTTP, FTP, SMTP]
-        A6[6 - Presentation<br/>Encryption, Compression]
-        A5[5 - Session<br/>Session Management]
-        A4[4 - Transport<br/>TCP, UDP]
-        A3[3 - Network<br/>IP, ICMP]
-        A2[2 - Data Link<br/>Ethernet, WiFi]
-        A1[1 - Physical<br/>Cables, Radio]
-    end
-    
-    subgraph "TCP/IP Model (4 Layers)"
-        B4[Application<br/>Layers 5-7]
-        B3[Transport<br/>Layer 4]
-        B2[Internet<br/>Layer 3]
-        B1[Network Access<br/>Layers 1-2]
-    end
-    
-    subgraph "Practical 5-Layer Model"
-        C5[Application<br/>User Interface & Data]
-        C4[Transport<br/>Segments & Services]
-        C3[Network<br/>Packets & Routing]
-        C2[Data Link<br/>Frames & MAC]
-        C1[Physical<br/>Bits & Signals]
-    end
-```
+#### **OSI Model (7 Layers)**
+
+| Layer | Name | Function | Examples | Data Unit |
+|-------|------|----------|----------|-----------|
+| **7** | **Application** | User interface & network processes | HTTP, FTP, SMTP, DNS | Data |
+| **6** | **Presentation** | Data encryption, compression, translation | SSL/TLS, JPEG, ASCII | Data |
+| **5** | **Session** | Session establishment & management | NetBIOS, RPC, SQL sessions | Data |
+| **4** | **Transport** | End-to-end communication & reliability | TCP, UDP | Segments |
+| **3** | **Network** | Routing & logical addressing | IP, ICMP, OSPF | Packets |
+| **2** | **Data Link** | Frame formatting & error detection | Ethernet, WiFi, PPP | Frames |
+| **1** | **Physical** | Physical transmission of raw bits | Cables, fiber, radio waves | Bits |
+
+#### **TCP/IP Model (4 Layers)**
+
+| TCP/IP Layer | Equivalent OSI Layers | Primary Protocols | Purpose |
+|--------------|----------------------|-------------------|---------|
+| **Application** | Layers 5-7 | HTTP, SMTP, FTP, DNS | User applications and services |
+| **Transport** | Layer 4 | TCP, UDP | End-to-end communication |
+| **Internet** | Layer 3 | IP, ICMP, ARP | Packet routing and addressing |
+| **Network Access** | Layers 1-2 | Ethernet, WiFi | Physical network access |
+
+#### **Practical 5-Layer Model (Most Common)**
+
+| Layer | Name | Data Unit | Key Function | Security Focus |
+|-------|------|-----------|--------------|---------------|
+| **5** | **Application** | Data | User interface & application payload | Application-layer attacks |
+| **4** | **Transport** | Segments | Port-based services and reliability | Port scanning, service enum |
+| **3** | **Network** | Packets | IP routing and addressing | IP spoofing, routing attacks |
+| **2** | **Data Link** | Frames | MAC addressing and switching | ARP poisoning, MAC flooding |
+| **1** | **Physical** | Bits | Physical signal transmission | Physical access, cable tapping |
 
 #### Data Encapsulation Process:
 
